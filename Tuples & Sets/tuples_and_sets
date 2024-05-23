@@ -1,0 +1,41 @@
+#Tuples - Ordered and Unchangable
+attackers = ("Saka", "Havertz", "Odegaard", "Jesus", "Trossard", "Martinelli")
+
+#some tuple methods
+print(attackers.count("Saka")) #1
+print(attackers.index("Havertz")) #1
+
+for player in attackers:
+  print(player) #Prints out the names in the tuple
+
+
+#Sets - Unordered and unindexed collection that doesn't allow duplicate values
+defenders = {"Saliba", "Gabriel", "White", "Tomiyasu", "Saliba", "Gabriel"}
+other_defenders = {"Timber", "Zinchenko", "Kiwior"}
+
+print(defenders) #Prints "Saliba" & "Gabriel" once ignoring duplicates .Order of items keeps changing when run multiple times
+
+#Common Set Methods
+defenders.remove("Tomiyasu") #Removes "Tomiyasu" from  the set
+print(defenders) 
+
+defenders.add("Jurrien") #adds "Jurrien" to the set
+print(defenders) #{'Saliba', 'Jurrien', 'White', 'Gabriel'}
+
+
+print(defenders.difference(other_defenders)) #Prints items present in defenders set and not in other_defenders set
+
+#adding items in one set in another 
+defenders.update(other_defenders)
+print(defenders) #{'Kiwior', 'Jurrien', 'Saliba', 'White', 'Gabriel', 'Timber', 'Zinchenko'}
+
+#checking for common items in 2 sets
+print(defenders.intersection(other_defenders)) #{'Timber', 'Kiwior', 'Zinchenko'}
+
+defenders = {"Saliba", "Gabriel", "White", "Tomiyasu", "Saliba", "Gabriel"}
+other_defenders = {"Timber", "Zinchenko", "Kiwior"}
+
+#Combining items in two or more sets to create another set
+arsenal_defenders = defenders.union(other_defenders)
+print(arsenal_defenders) #{'Kiwior', 'Saliba', 'Zinchenko', 'Tomiyasu', 'White', 'Gabriel', 'Timber'}
+
